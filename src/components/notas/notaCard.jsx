@@ -13,6 +13,7 @@ class NotaCard extends React.Component {
         return (
             <li>
             <h3>{this.props.title} <button onClick={this.removeCard.bind(this)}>🗑️</button></h3>
+            <h5>{this.props.cat}</h5>
             <p>{this.props.p}</p>
         </li>
         )}

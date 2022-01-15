@@ -13,7 +13,13 @@ class ListaNotas extends React.Component {
             <ul>
                 {this.props.arrayNotas.map((nota, index) => {
                     return (
-                        <NotaCard removeCard={this.removeCard.bind(this)} index={index} key={index} title={nota.titulo} p={nota.p}/>
+                        <NotaCard 
+                        removeCard={this.removeCard.bind(this)} 
+                        index={index} 
+                        key={index} 
+                        title={nota.titulo} 
+                        p={nota.p}
+                        cat={nota.cat}/>
                     )
                 })}
             </ul>
