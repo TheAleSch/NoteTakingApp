@@ -2,7 +2,7 @@ import './App.css';
 import Formulario from './components/form/formulario';
 import ListaNotas from './components/notas/ListaNotas';
 import React, { Component } from 'react';
-
+import ListaDeCategorias from './components/ListaDeCategorias'
 
 class App extends Component {
 constructor(props) {
@@ -26,8 +26,7 @@ constructor(props) {
   removeCard(index){
 
     let novaLista = {notasArray: [...this.state.notasArray]}
-    let remove = (index) => {novaLista.notasArray.splice(index, 1)}
-    remove()
+    novaLista.notasArray.splice(index, 1)
     this.setState(novaLista)  
   }
 
@@ -36,6 +35,7 @@ constructor(props) {
   return (
     <div className="App">
 <Formulario criarNota={this.criarNota.bind(this)}/>
+<ListaDeCategorias/>
 <ListaNotas removeCard={this.removeCard.bind(this)} arrayNotas={this.state.notasArray}/>
     </div>
   )}
