@@ -11,7 +11,7 @@ class ListaNotas extends React.Component {
     render() { 
         return (
             <ul>
-                {this.props.arrayNotas.map((nota, index) => {
+                {this.props.notas.map((nota, index) => {
                     return (
                         <NotaCard 
                         removeCard={this.removeCard.bind(this)} 

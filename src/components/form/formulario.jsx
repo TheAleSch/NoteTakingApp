@@ -43,7 +43,7 @@ constructor(props) {
     render() { 
         return (<form onSubmit={this._criarNota.bind(this)}>
             <select onChange={this._handleCat.bind(this)}>
-                {this.props.categories.map( (c,i) => <option  key={i} value={c}>{c}</option>)}
+                {this.props.categories.map((c,i) => <option  key={i} value={c}>{c}</option>)}
             </select>
             <input onChange={this._handleTitulo.bind(this)} type="text" placeholder="aisjiaisj"></input>
             <textarea onChange={this._handleP.bind(this)} className=""></textarea>
