@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <Formulario
-          categories={[this.categorias.categorias]}
+          categorias={this.categorias}
           criarNota={this.notas.criarNota.bind(this.notas)}
         />
         <ListaDeCategorias
@@ -24,8 +24,8 @@ class App extends Component {
           addCatF={this.categorias.addCat.bind(this.categorias)}
         />
         <ListaNotas
-          removeCard={this.notas.deletarNota}
-          notas={this.notas.notas}
+          removeCard={this.notas.deletarNota.bind(this.notas)}
+          notas={this.notas}
         />
       </div>
     );
